@@ -28,13 +28,13 @@ public class ProjectController {
         return ResponseEntity.ok(projectService.getProject(projectId).orElse(null));
     }
 
-    @PutMapping("/{ProjectId}")
+    @PutMapping("/{projectId}")
     public ResponseEntity<Project> updateProject(@PathVariable("projectId") Integer projectId,
                                                  @RequestBody ProjectRequest projectRequest){
         return ResponseEntity.ok(projectService.updateProject(projectId, projectRequest).orElse(null));
     }
 
-    @DeleteMapping("/{ProjectId}")
+    @DeleteMapping("/{projectId}")
     public ResponseEntity<Void> deleteProject(@PathVariable("projectId") Integer projectId){
         projectService.deleteProject(projectId);
 

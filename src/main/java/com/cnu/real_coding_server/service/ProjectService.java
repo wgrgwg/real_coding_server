@@ -28,8 +28,8 @@ public class ProjectService {
                     project.setSummary(projectRequest.getSummary());
                     project.setDescription(projectRequest.getDescription());
                     project.setStartDate(projectRequest.getStartDate());
-                    project.getEndDate();
-                    project.getIsInProgress();
+                    project.setEndDate(projectRequest.getEndDate());
+                    project.setIsInProgress(projectRequest.getIsInProgress());
                     return projectRepository.save(project);
         });
     }

@@ -1,12 +1,14 @@
 package com.cnu.real_coding_server.model.request;
 
 import com.cnu.real_coding_server.entity.Project;
+import jakarta.validation.Valid;
 import lombok.Getter;
 
 import java.time.LocalDateTime;
 
 @Getter
 public class ProjectRequest {
+
     private String title;
 
     private String summary;
